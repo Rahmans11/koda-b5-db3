@@ -11,7 +11,7 @@ SELECT a.first_name, COUNT(ma.movie_id) AS "number of roles played"
 FROM movies_actors ma
 JOIN actors a on ma.actor_id = a.id
 GROUP BY a.first_name
-HAVING COUNT(ma.movie_id) >= 5
+HAVING COUNT(ma.movie_id) > 5
 ORDER BY "number of roles played" DESC;
 
 --C
